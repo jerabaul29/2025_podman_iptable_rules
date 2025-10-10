@@ -8,4 +8,5 @@ Most tests and implementations are based on discussions from: https://github.com
 
 ## Status
 
-- not working: somehow the prestart hook is not trying to apply iptable rules to the right namespace (?)
+This seems to be working :) .
+
