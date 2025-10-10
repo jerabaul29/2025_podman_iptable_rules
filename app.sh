@@ -35,15 +35,15 @@ iptables -P FORWARD DROP
 
 echo ""
 echo " > Check access to 8.8.8.8"
-nc -w 3 -z 8.8.8.8 53
+nc -w 3 -z 8.8.8.8 53 || true
 
 echo ""
 echo " > Check access to 1.1.1.1"
-nc -w 3 -z 1.1.1.1 53
+nc -w 3 -z 1.1.1.1 53 || true
 
 echo ""
 echo " > Check access to vg.no"
-nc -w 3 -z vg.no 80
+nc -w 3 -z vg.no 80 || true
 
 echo ""
 echo " > End app.sh"
