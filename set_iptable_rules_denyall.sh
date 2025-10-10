@@ -10,7 +10,7 @@ iptables -P OUTPUT DROP >> /home/jeanr/Desktop/Current/mylogs/log_set_iptable_ru
 iptables -P FORWARD DROP >> /home/jeanr/Desktop/Current/mylogs/log_set_iptable_rules_denyall.log 2>&1
 
 # Log the applied rules (optional, for debugging)
-echo "Applied iptables rules:"
-iptables -L -v
+echo "Applied iptables rules:" >> /home/jeanr/Desktop/Current/mylogs/log_set_iptable_rules_denyall.log 2>&1
+iptables -L -v >> /home/jeanr/Desktop/Current/mylogs/log_set_iptable_rules_denyall.log 2>&1
 
-echo "Finished set_iptable_rules_denayll.sh hook"
+echo "Finished set_iptable_rules_denayll.sh hook" >> /home/jeanr/Desktop/Current/mylogs/log_set_iptable_rules_denyall.log 2>&1
