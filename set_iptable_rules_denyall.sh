@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Start set_iptable_rules_denyall.sh hook"
+
 # Block all incoming and outgoing traffic
 iptables -P INPUT DROP
 iptables -P OUTPUT DROP

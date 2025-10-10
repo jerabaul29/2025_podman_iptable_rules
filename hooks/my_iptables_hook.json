@@ -1,5 +1,5 @@
 {
-    "version": "0.0.1",
+    "version": "1.0.0",
     "hook": {
         "path": "~/Desktop/Git/2025_podman_iptable_rules/set_iptable_rules_denyall.sh"
     },
