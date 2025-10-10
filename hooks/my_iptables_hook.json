@@ -1,11 +1,11 @@
 {
     "version": "0.0.1",
     "hook": {
-        "path": "~/Desktop/Git/2025_podman_iptable_rules/set_iptable_rules.sh"
+        "path": "~/Desktop/Git/2025_podman_iptable_rules/set_iptable_rules_denyall.sh"
     },
     "when": {
         "annotations": {
-            "^my.iptables.hook$": ".+"
+            "^apply.iptables.denyall_hook$": ".+"
         }
     },
     "stages": ["prestart"]
