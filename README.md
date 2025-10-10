@@ -10,3 +10,11 @@ Most tests and implementations are based on discussions from: https://github.com
 
 This seems to be working :) .
 
+Note that I wanted to have everything in a single folder, and since hooks typically need fully qualified paths, this means I have hard-coded quite a few paths to non standard hook location etc. This assumes that the repo is cloned into `~/Desktop/Git`, i.e.
+
+```
+/Desktop/Git/2025_podman_iptable_rules [main|✔]> pwd
+/home/jeanr/Desktop/Git/2025_podman_iptable_rules
+```
+
+and my username is `jeanr` - so to make things work, you may need to edit username (if you also clone in `~/Desktop/Git`), or the full paths if you use a different location. Not sure if there is a better way around when I want to keep all files in a folder and hooks etc typically live in some `/etc` or similar folders by default.
