@@ -10,7 +10,7 @@ Most tests and implementations are based on discussions from: https://github.com
 
 This seems to be working :) .
 
-Note that I wanted to have everything in a single folder, and since hooks typically need fully qualified paths, this means I have hard-coded quite a few paths to non standard hook location etc. This assumes that the repo is cloned into `~/Desktop/Git`, i.e.
+Note that I wanted to have everything in a single folder so it is easy to clone and work with, and since hooks typically need fully qualified paths, this means I have hard-coded quite a few paths to non standard hook location etc. This assumes that the repo is cloned into `~/Desktop/Git`, i.e.
 
 ```
 /Desktop/Git/2025_podman_iptable_rules [main|✔]> pwd
