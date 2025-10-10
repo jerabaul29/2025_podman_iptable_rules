@@ -19,15 +19,25 @@ shopt -s nullglob
 
 # ----------------------------------------
 
-echo "Start app.sh"
+echo " > Start app.sh"
 
 echo ""
-echo "Check access to 8.8.8.8"
+echo " > Check capabilities: the container should not have (i.e either not present or explicitely disabled with !) the cap_net_admin capability; otherwise, it can change its own network rules, including changing iptable rules."
+capsh --print
+echo " > grep the cap and check it:"
+capsh --print | grep --color=always -i !cap_net_admin
+
+echo ""
+echo " > Check access to 8.8.8.8"
 nc -w 3 -z 8.8.8.8 53
 
 echo ""
-echo "Check access to 1.1.1.1"
+echo " > Check access to 1.1.1.1"
 nc -w 3 -z 1.1.1.1 53
 
 echo ""
-echo "End app.sh"
+echo " > Check access to vg.no"
+nc -w 3 -z vg.no 80
+
+echo ""
+echo " > End app.sh"
