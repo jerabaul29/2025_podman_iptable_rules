@@ -4,8 +4,7 @@ FROM ubuntu:latest
 RUN apt-get update && \
     apt-get install -y netcat-openbsd --no-install-recommends && \
     apt-get install -y libcap2-bin --no-install-recommends && \
-    # this is to have the iptable commands
-    # apt-get install -y iptables --no-install-recommends && \
+    apt-get install -y iptables --no-install-recommends && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

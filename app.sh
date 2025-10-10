@@ -28,6 +28,12 @@ echo " > grep the cap and check it:"
 capsh --print | grep --color=always -i !cap_net_admin
 
 echo ""
+echo " > Check that we cannot set and change iptables rules from within the container (as expected)"
+iptables -P INPUT DROP && \
+iptables -P OUTPUT DROP && \
+iptables -P FORWARD DROP
+
+echo ""
 echo " > Check access to 8.8.8.8"
 nc -w 3 -z 8.8.8.8 53
 

@@ -1,0 +1,12 @@
+{
+    "version": "0.0.1",
+    "hook": {
+        "path": "~/Desktop/Git/2025_podman_iptable_rules/set_iptable_rules.sh"
+    },
+    "when": {
+        "annotations": {
+            "^my.iptables.hook$": ".+"
+        }
+    },
+    "stages": ["prestart"]
+}
