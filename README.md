@@ -18,3 +18,7 @@ Note that I wanted to have everything in a single folder so it is easy to clone 
 ```
 
 and my username is `jeanr` - so to make things work, you may need to edit username (if you also clone in `~/Desktop/Git`), or the full paths if you use a different location. Not sure if there is a better way around when I want to keep all files in a folder and hooks etc typically live in some `/etc` or similar folders by default.
+
+## Disclaimers
+
+I am not a podman expert - this comes without guarantees. Feedback welcome!
