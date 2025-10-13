@@ -23,7 +23,7 @@ The way the firewalling is applied in rootless mode (disclaimer: I am not a podm
 
 The limitations:
 
-- this will only container the container in rootless mode, when the container has no `CAP_NET_ADMIN` capability; otherwise, the container itself has the authority to modify its own network configuration, including network configuration and firewallying.
+- this will only contain the container in rootless mode, when the container has no `CAP_NET_ADMIN` capability; otherwise, the container itself has the authority to modify its own network configuration, including network configuration and firewallying. So make sure to use the right `podman run` command and arguments!
 - See https://docs.podman.io/en/latest/markdown/podman-run.1.html ; you should in particular be careful to make sure that the container does not have additional `--cap-add` flags that breaks the confinement: https://docs.podman.io/en/latest/markdown/podman-run.1.html#cap-add-capability .
 
 Going further:
