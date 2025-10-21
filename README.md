@@ -2,6 +2,8 @@
 
 Experiments about applying iptable rules to a podman container.
 
+For a detailed blog post about this, see: https://jerabaul29.github.io/jekyll/update/2025/10/17/Firewall-a-podman-container.html .
+
 The goal is to put iptable or similar firewall rules in the network namespace of a podman container, so that it is possible to fine grained firewall containers individually. Once this is set and the container runs, the container should not be able to change these rules. Basically, this is an additional layer of security / containment: a container should only have network access if it needs to, and should only be able to contact IPs it has a reason to contact. This is just one additional step to limit the impact of e.g. a vulnerability in a container or a container that is under supply chain attack: the container should only be allowed to contact IPs that the user trusts anyways.
 
 Most tests and implementations are based on discussions from: https://github.com/containers/podman/discussions/27099 .
